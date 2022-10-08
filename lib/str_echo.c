@@ -6,8 +6,9 @@ void str_echo(int sockfd){
 
 again:
 	while ( (n = read(sockfd, buf, MAXLINE)) > 0){
-		Writen(sockfd, buf, n);
 		Fputs("msg from client", stdout);
+		Fputs(buf, stdout);
+		Writen(sockfd, buf, n);		
 	}
 		
 
