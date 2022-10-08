@@ -1,4 +1,5 @@
 #include "unp.h"
+#include "sigchldwait.c"
 
 int main(int argc, char ** argv)
 {
@@ -13,6 +14,7 @@ int main(int argc, char ** argv)
 	servaddr.sin_port = htons(SERV_PORT);
 	Bind(listenfd, (SA *) &servaddr, sizeof(servaddr));
 	Listen(listenfd, LISTENQ);
+	Signal(SIGCHLD, sig_chld);
 	for(;;){
 		clilen = sizeof(cliaddr);
 		connfd = Accept(listenfd, (SA *) &cliaddr, &clilen);
@@ -23,4 +25,14 @@ int main(int argc, char ** argv)
 		}
 		Close(connfd);
 	}
+
+	// for (;;){
+	// 	clilen = sizeof(cliaddr);
+	// 	if ( (connfd = accept(listenfd, (SA *) &cliaddr, &clilen)) < 0){
+	// 		if(errno == EINTR)
+	// 			continue;
+	// 		else
+	// 			err_sys("accept error");
+	// 	}
+	// }
 }
