@@ -9,9 +9,15 @@ all:	${PROGS}
 
 tcpcli01:	tcpcli01.o
 			${CC} ${CFLAGS} -o $@ tcpcli01.o ${LIBS}
+tcpcli04:	tcpcli04.o
+			${CC} ${CFLAGS} -o $@ tcpcli04.o ${LIBS}
+tcpcli11:	tcpcli11.o
+			${CC} ${CFLAGS} -o $@ tcpcli11.o ${LIBS}
 
 tcpserv01:	tcpserv01.o
 			${CC} ${CFLAGS} -o $@ tcpserv01.o ${LIBS}
+tcpserv04:	tcpserv04.o
+			${CC} ${CFLAGS} -o $@ tcpserv04.o ${LIBS}
 
 clean:
 			rm -f ${PROGS} ${CLEANFILES}

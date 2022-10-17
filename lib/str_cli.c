@@ -9,7 +9,7 @@ str_cli(FILE *fp, int sockfd)
         if (Readline(sockfd, recvline, MAXLINE) == 0)
             err_quit("str_cli: server terminated prematurely");
 
-        Fputs("echo from service:", stdout);
+        Fputs("echo from service: ", stdout);
         Fputs(recvline, stdout);
     }
 }
