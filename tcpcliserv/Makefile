@@ -11,6 +11,8 @@ tcpcli01:	tcpcli01.o
 			${CC} ${CFLAGS} -o $@ tcpcli01.o ${LIBS}
 tcpcli04:	tcpcli04.o
 			${CC} ${CFLAGS} -o $@ tcpcli04.o ${LIBS}
+tcpcli09: 	tcpcli09.o
+			${CC} ${CFLAGS} -o $@ tcpcli09.o ${LIBS}
 tcpcli11:	tcpcli11.o
 			${CC} ${CFLAGS} -o $@ tcpcli11.o ${LIBS}
 
@@ -18,6 +20,9 @@ tcpserv01:	tcpserv01.o
 			${CC} ${CFLAGS} -o $@ tcpserv01.o ${LIBS}
 tcpserv04:	tcpserv04.o
 			${CC} ${CFLAGS} -o $@ tcpserv04.o ${LIBS}
-
+tcpserv08: tcpserv08.o
+			${CC} ${CFLAGS} -o $@ tcpserv08.o ${LIBS}
+tcpserv09: tcpserv09.o
+			${CC} ${CFLAGS} -o $@ tcpserv09.o ${LIBS}
 clean:
 			rm -f ${PROGS} ${CLEANFILES}
