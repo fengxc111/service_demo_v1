@@ -1,5 +1,9 @@
 {
     "files.associations": {
-        "socket.h": "c"
+        "socket.h": "c",
+        "limits": "cpp",
+        "poll.h": "c",
+        "limits.h": "c",
+        "syslimits.h": "c"
     }
 }

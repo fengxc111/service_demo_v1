@@ -24,5 +24,9 @@ tcpserv08: tcpserv08.o
 			${CC} ${CFLAGS} -o $@ tcpserv08.o ${LIBS}
 tcpserv09: tcpserv09.o
 			${CC} ${CFLAGS} -o $@ tcpserv09.o ${LIBS}
+tcpservselect01: tcpservselect01.o
+			${CC} ${CFLAGS} -o $@ tcpservselect01.o ${LIBS}
+tcpservpoll01: tcpservpoll01.o
+			${CC} ${CFLAGS} -o $@ tcpservpoll01.o ${LIBS}
 clean:
 			rm -f ${PROGS} ${CLEANFILES}
