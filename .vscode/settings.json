@@ -4,6 +4,13 @@
         "limits": "cpp",
         "poll.h": "c",
         "limits.h": "c",
-        "syslimits.h": "c"
+        "syslimits.h": "c",
+        "unp.h": "c",
+        "pthread.h": "c",
+        "sctp.h": "c",
+        "errno.h": "c"
+    },
+    "files.exclude": {
+        "**/*.o": true
     }
 }
